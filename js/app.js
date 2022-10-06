@@ -72,19 +72,21 @@ function question4(){
 }
 question4();
 
+function question5(){
+  let favColor = prompt('Do you think my fav color is blue? (yes/no)').toLowerCase();
+  if (favColor === 'yes' || favColor === 'y') {
+    score++;
+    alert('Well you\'d be correct! I love it!');
+  }
+  else if (favColor === 'no' || favColor === 'n') {
+    alert('Well thats where youre wrong bucko!');
+  }
+  else{
+    alert(answerPls);
+  }
+}
+question5();
 
-let favColor = prompt('Do you think my fav color is blue? (yes/no)').toLowerCase();
-
-if (favColor === 'yes' || favColor === 'y') {
-  score++;
-  alert('Well you\'d be correct! I love it!');
-}
-else if (favColor === 'no' || favColor === 'n') {
-  alert('Well thats where youre wrong bucko!');
-}
-else{
-  alert(answerPls);
-}
 //guess number game
 
 let favNumber = '11';

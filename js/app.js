@@ -93,29 +93,32 @@ let favNumber = '11';
 
 let attemptsRemain = 4;
 
-while (attemptsRemain > 0){
-  let userAnswer = prompt('what is my favorite number? (1-20)');
+function question6(){
+  while (attemptsRemain > 0){
+    let userAnswer = prompt('what is my favorite number? (1-20)');
 
-  if (userAnswer > favNumber) {
-    attemptsRemain--;
-    alert(`Your guess is too high! You have ${attemptsRemain} remaining`);
-  }
+    if (userAnswer > favNumber) {
+      attemptsRemain--;
+      alert(`Your guess is too high! You have ${attemptsRemain} remaining`);
+    }
 
-  else if (userAnswer < favNumber) {
-    attemptsRemain--;
-    alert(`Your number is too low! You have ${attemptsRemain} remaining`);
-  }
+    else if (userAnswer < favNumber) {
+      attemptsRemain--;
+      alert(`Your number is too low! You have ${attemptsRemain} remaining`);
+    }
 
-  else if (userAnswer === favNumber) {
-    score ++;
-    alert('You\'re right! Good guess!');
-    break;
-  }
-  else if (attemptsRemain === 0){
-    alert('I gave you so many chances! The right answer was 11!');
-    break;
+    else if (userAnswer === favNumber) {
+      score ++;
+      alert('You\'re right! Good guess!');
+      break;
+    }
+    else if (attemptsRemain === 0){
+      alert('I gave you so many chances! The right answer was 11!');
+      break;
+    }
   }
 }
+question6();
 
 let attempts = 6;
 

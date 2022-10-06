@@ -1,6 +1,7 @@
 'use strict';
 
 console.log('Hello World');
+let score = 0;
 
 let answerPls = 'Do you hate me? Is that what it is? So rude!';
 
@@ -14,6 +15,7 @@ alert('Lets play a game');
 
 let haveCat = prompt('Do you think I have a cat? (yes/no)').toLowerCase();
 if (haveCat === 'yes' || haveCat === 'y') {
+  score++;
   alert('You are right! I love my cats (I have 2)');
 } else if (haveCat === 'no' || haveCat === 'n') {
   alert('WRONG! I love cats. I have 2!');
@@ -25,6 +27,7 @@ if (haveCat === 'yes' || haveCat === 'y') {
 
 let amMarried = prompt('Do you think I\'m married? (yes/no)').toLowerCase();
 if (amMarried === 'yes' || amMarried === 'y') {
+  score++;
   alert('Yes I am married!');
 }
 else if (amMarried === 'no' || amMarried === 'n') {
@@ -39,6 +42,7 @@ else {
 let haveKid = prompt('Do you think I have a kid? (yes/no)').toLowerCase();
 
 if (haveKid === 'yes' || haveKid === 'y') {
+  score ++;
   alert('I do have a daughter! shes 9 months old!');
 }
 else if (haveKid === 'no' || haveKid === 'n') {
@@ -52,6 +56,7 @@ else {
 let howOld = prompt('Do you think I\'m 23 years old? (yes/no)').toLowerCase();
 
 if (howOld === 'yes' || howOld === 'y') {
+  score ++;
   alert(' You\'re right!');
 }
 else if (howOld === 'no' || howOld === 'n') {
@@ -65,6 +70,7 @@ else {
 let favColor = prompt('Do you think my fav color is blue? (yes/no)').toLowerCase();
 
 if (favColor === 'yes' || favColor === 'y') {
+  score++;
   alert('Well you\'d be correct! I love it!');
 }
 else if (favColor === 'no' || favColor === 'n') {
@@ -93,6 +99,7 @@ while (attemptsRemain > 0){
   }
 
   else if (userAnswer === favNumber) {
+    score ++;
     alert('You\'re right! Good guess!');
     break;
   }
@@ -113,8 +120,11 @@ while (attempts > 0){
     alert(`How do you even mess this up? ${attempts} attempts remaining.`);
   }
   else if (userResponse === answers[0,1]){
+    score ++;
     alert('congrats! It wasnt so hard see?');
     break;
   }
 }
+alert('the only answers were chocolate and vanilla!');
+alert('total score:' + score);
 alert('Thank you for participating in my quiz ' + userName + '!');

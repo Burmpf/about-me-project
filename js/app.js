@@ -66,33 +66,55 @@ let favColor = prompt('Do you think my fav color is blue? (yes/no)').toLowerCase
 
 if (favColor === 'yes' || favColor === 'y') {
   alert('Well you\'d be correct! I love it!');
-} 
+}
 else if (favColor === 'no' || favColor === 'n') {
   alert('Well thats where youre wrong bucko!');
-} 
+}
 else{
   alert(answerPls);
 }
+//guess number game
 
+let favNumber = '11';
+
+let attemptsRemain = 4;
+
+while (attemptsRemain > 0){
+  let userAnswer = prompt('what is my favorite number? (1-20)');
+
+  if (userAnswer > favNumber) {
+    attemptsRemain--;
+    alert(`Your guess is too high! You have ${attemptsRemain} remaining`);
+  }
+
+  else if (userAnswer < favNumber) {
+    attemptsRemain--;
+    alert(`Your number is too low! You have ${attemptsRemain} remaining`);
+  }
+
+  else if (userAnswer === favNumber) {
+    alert('You\'re right! Good guess!');
+    break;
+  }
+  else if (attemptsRemain === 0){
+    alert('I gave you so many chances! The right answer was 11!');
+    break;
+  }
+}
+
+let attempts = 6;
+
+const answers = ['chocola te' , 'vanilla',];
+console.log(answers[0,1]);
+while (attempts > 0){
+  let userResponse = prompt('What is the best flavor of icescream?');
+  if (userResponse !== answers[0,1]){
+    attempts--;
+    alert(`How do you even mess this up? ${attempts} attempts remaining.`);
+  }
+  else if (userResponse === answers[0,1]){
+    alert('congrats! It wasnt so hard see?');
+    break;
+  }
+}
 alert('Thank you for participating in my quiz ' + userName + '!');
-
-
-
-
-
-
-
-
-//let likesStarWars = prompt('Do I like Star Wars?').toLowerCase();
-//  console.log(likesStarWars);
-//  likesStarWars = likesStarWars.toLowerCase();
-//  console.log(likesStarWars);
-
-// if (likesStarWars === 'yes' || likesStarWars === 'y') {
-//   console.log('You are correct. I do like Star Wars');
-// } else if (likesStarWars === 'no' || likesStarWars === 'n') {
-//   console.log('That is incorrect. I do like Star Wars');
-// } else {
-//   console.log('You need to answer with a Yes or a No');
-// }
-

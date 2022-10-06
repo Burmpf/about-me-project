@@ -25,18 +25,20 @@ function question1(){
 }
 question1();
 
-
-let amMarried = prompt('Do you think I\'m married? (yes/no)').toLowerCase();
-if (amMarried === 'yes' || amMarried === 'y') {
-  score++;
-  alert('Yes I am married!');
+function question2(){
+  let amMarried = prompt('Do you think I\'m married? (yes/no)').toLowerCase();
+  if (amMarried === 'yes' || amMarried === 'y') {
+    score++;
+    alert('Yes I am married!');
+  }
+  else if (amMarried === 'no' || amMarried === 'n') {
+    alert('I am married! Stay away for both of our sakes!');
+  }
+  else {
+    alert(answerPls);
+  }
 }
-else if (amMarried === 'no' || amMarried === 'n') {
-  alert('I am married! Stay away for both of our sakes!');
-}
-else {
-  alert(answerPls);
-}
+question2();
 
 
 

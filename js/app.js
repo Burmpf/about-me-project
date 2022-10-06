@@ -12,17 +12,18 @@ alert('Welcome to my site ' + userName + '!');
 
 alert('Lets play a game');
 
-
-let haveCat = prompt('Do you think I have a cat? (yes/no)').toLowerCase();
-if (haveCat === 'yes' || haveCat === 'y') {
-  score++;
-  alert('You are right! I love my cats (I have 2)');
-} else if (haveCat === 'no' || haveCat === 'n') {
-  alert('WRONG! I love cats. I have 2!');
-} else {
-  alert(answerPls);
+function question1(){
+  let haveCat = prompt('Do you think I have a cat? (yes/no)').toLowerCase();
+  if (haveCat === 'yes' || haveCat === 'y') {
+    score++;
+    alert('You are right! I love my cats (I have 2)');
+  } else if (haveCat === 'no' || haveCat === 'n') {
+    alert('WRONG! I love cats. I have 2!');
+  } else {
+    alert(answerPls);
+  }
 }
-
+question1();
 
 
 let amMarried = prompt('Do you think I\'m married? (yes/no)').toLowerCase();

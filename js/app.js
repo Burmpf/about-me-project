@@ -41,20 +41,20 @@ function question2(){
 question2();
 
 
-
-let haveKid = prompt('Do you think I have a kid? (yes/no)').toLowerCase();
-
-if (haveKid === 'yes' || haveKid === 'y') {
-  score ++;
-  alert('I do have a daughter! shes 9 months old!');
+function question3(){
+  let haveKid = prompt('Do you think I have a kid? (yes/no)').toLowerCase();
+  if (haveKid === 'yes' || haveKid === 'y') {
+    score ++;
+    alert('I do have a daughter! shes 9 months old!');
+  }
+  else if (haveKid === 'no' || haveKid === 'n') {
+    alert('WRONG! I do have a daughter! Shes 9 months old!');
+  }
+  else {
+    alert(answerPls);
+  }
 }
-else if (haveKid === 'no' || haveKid === 'n') {
-  alert('WRONG! I do have a daughter! Shes 9 months old!');
-}
-else {
-  alert(answerPls);
-}
-
+question3();
 
 let howOld = prompt('Do you think I\'m 23 years old? (yes/no)').toLowerCase();
 

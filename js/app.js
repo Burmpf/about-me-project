@@ -122,20 +122,24 @@ question6();
 
 let attempts = 6;
 
-const answers = ['chocola te' , 'vanilla',];
-console.log(answers[0,1]);
-while (attempts > 0){
-  let userResponse = prompt('What is the best flavor of icescream?');
-  if (userResponse !== answers[0,1]){
-    attempts--;
-    alert(`How do you even mess this up? ${attempts} attempts remaining.`);
+function question7(){
+  const answers = ['chocolate' , 'vanilla',];
+  console.log(answers[0,1]);
+  while (attempts > 0){
+    let userResponse = prompt('What is the best flavor of ice cream?');
+    if (userResponse !== answers[0,1]){
+      attempts--;
+      alert(`How do you even mess this up? ${attempts} attempts remaining.`);
+    }
+    else if (userResponse === answers[0,1]){
+      score ++;
+      alert('congrats! It wasnt so hard see?');
+      break;
+    }
   }
-  else if (userResponse === answers[0,1]){
-    score ++;
-    alert('congrats! It wasnt so hard see?');
-    break;
-  }
+  alert('the only answers were chocolate and vanilla!');
 }
-alert('the only answers were chocolate and vanilla!');
+question7();
+
 alert('total score:' + score);
 alert('Thank you for participating in my quiz ' + userName + '!');

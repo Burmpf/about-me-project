@@ -56,18 +56,21 @@ function question3(){
 }
 question3();
 
-let howOld = prompt('Do you think I\'m 23 years old? (yes/no)').toLowerCase();
 
-if (howOld === 'yes' || howOld === 'y') {
-  score ++;
-  alert(' You\'re right!');
+function question4(){
+  let howOld = prompt('Do you think I\'m 23 years old? (yes/no)').toLowerCase();
+  if (howOld === 'yes' || howOld === 'y') {
+    score ++;
+    alert(' You\'re right!');
+  }
+  else if (howOld === 'no' || howOld === 'n') {
+    alert('wrong! I\'m actually 23!');
+  }
+  else {
+    alert(answerPls);
+  }
 }
-else if (howOld === 'no' || howOld === 'n') {
-  alert('wrong! I\'m actually 23!');
-}
-else {
-  alert(answerPls);
-}
+question4();
 
 
 let favColor = prompt('Do you think my fav color is blue? (yes/no)').toLowerCase();
